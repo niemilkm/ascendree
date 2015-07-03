@@ -1,0 +1,3 @@
+LeafNewController = AppController.extend({
+
+});

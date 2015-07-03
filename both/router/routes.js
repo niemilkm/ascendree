@@ -6,10 +6,14 @@ Router.route('/dashboard', {
   name: 'dashboard'
 });
 
-Router.route('/items/new', {
-  name: 'items.new'
+Router.route('/leaf/new', {
+  name: 'leaf.new'
 });
 
-Router.plugin('ensureSignedIn', {
-  only: ['dashboard']
-});
+// Router.route('/items/new', {
+//   name: 'items.new'
+// });
+
+// Router.plugin('ensureSignedIn', {
+//   only: ['dashboard']
+// });
