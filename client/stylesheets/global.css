@@ -20,3 +20,7 @@ ul.side-nav li {
 footer.page-footer {
   background-color: #0d47a1;
 }
+
+.container {
+  width: 70%;
+}

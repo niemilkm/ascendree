@@ -1,3 +1,3 @@
-LeafNewController = AppController.extend({
+LeafTextNewController = AppController.extend({
 
 });

@@ -1,8 +1,16 @@
 <template name="dashboard">
   <div class="template-dashboard">
-    <a class="btn-floating btn-large waves-effect waves-light red right" href="{{pathFor 'leaf.new'}}"><i class="mdi-content-add"></i></a>
-
-    <h1>Dashboard</h1>
+    <div class="hide-on-med-and-down">
+      <a class="btn-floating btn-large waves-effect waves-light red right" href="{{pathFor 'leaf.text.new'}}"><i class="mdi-content-add"></i></a>
+      <!-- <a class="btn-floating btn-large waves-effect waves-light red right"><i class="fa-filter"></i></a> -->
+      <h1>Dashboard</h1>
+    </div>
+    <div class="hide-on-large-only">
+      <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large waves-effect waves-light red right" href="{{pathFor 'leaf.text.new'}}"><i class="mdi-content-add"></i></a>
+      </div>
+      <h3>Dashboard</h3>
+    </div>
 
     <div class="row">
 
