@@ -1,15 +1,20 @@
-
-Template.leftSidePanel.created = function() {
+Template.filterOptions.created = function() {
   this.filterTree = new ReactiveVar(true);
   this.filterBranch1 = new ReactiveVar(true);
   this.filterBranch2 = new ReactiveVar(true);
+  this.filterDateAfter = new ReactiveVar(true);
+
+  $('.datepicker').pickadate({
+    //selectMonths: true, // Creates a dropdown to control month
+    //selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
 };
 
-Template.leftSidePanel.rendered = function() {
+Template.filterOptions.rendered = function() {
   // $(".button-collapse").sideNav();
 };
 
-Template.leftSidePanel.helpers({
+Template.filterOptions.helpers({
 
   filterTree: function() {
     return Template.instance().filterTree.get();
@@ -23,9 +28,13 @@ Template.leftSidePanel.helpers({
     return Template.instance().filterBranch2.get();
   },
 
+  filterDateAfter: function() {
+    return Template.instance().filterDateAfter.get();
+  },
+
 });
 
-Template.leftSidePanel.events({
+Template.filterOptions.events({
 
   'click [name=filterTree]': function(e) {
     e.preventDefault();
@@ -49,6 +58,14 @@ Template.leftSidePanel.events({
       Template.instance().filterBranch2.set(false);
     else
       Template.instance().filterBranch2.set(true);
+  },
+
+  'click [name=filterDateAfter]': function(e) {
+    e.preventDefault();
+    if (Template.instance().filterDateAfter.get())
+      Template.instance().filterDateAfter.set(false);
+    else
+      Template.instance().filterDateAfter.set(true);
   },
 
 });

@@ -24,3 +24,15 @@ footer.page-footer {
 .container {
   width: 70%;
 }
+
+.black a {
+  color: black;
+}
+
+.tabs .tab a {
+    color: #fff;
+  }
+
+.card .makePicL1 {
+  width: 8.333%;
+}

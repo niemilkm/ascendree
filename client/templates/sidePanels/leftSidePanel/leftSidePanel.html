@@ -1,75 +1,16 @@
 <Template name="leftSidePanel">
   {{#if isActiveRoute regex='dashboard' }}
     <div class="template-leftSidePanel">
-      <div class="sideText hide-on-med-and-down">
-        <form>
-          <h5>Filter</h5>
-          <ul>
 
-            {{#if filterTree}}
-              <li><a name="filterTree" href="#"><i class="fa fa-angle-right"></i> <u>Tree</u></a></li>
-            {{else}}
-              <li><a name="filterTree" href="#"><i class="fa fa-angle-down"></i> <u>Tree</u></a></li>
-              <div class="row">
-                <div class="col offset-l1">
-                  <ul>
-                    <li><input type="checkbox" id="Tree1" />
-                    <label class="black-text" for="Tree1"> Tree1</label></li>
-                    <li><input type="checkbox" id="Tree2" />
-                    <label class="black-text" for="Tree2"> Tree2</label></li>
-                    <li><input type="checkbox" id="Tree3" />
-                    <label class="black-text" for="Tree3"> Tree3</label></li>
-                    <li><input type="checkbox" id="Tree4" />
-                    <label class="black-text" for="Tree4"> Tree4</label></li>
-                  </ul>
-                </div>
-              </div>
-            {{/if}}
-
-            {{#if filterBranch1}}
-              <li><a name="filterBranch1" href="#"><i class="fa fa-angle-right"></i> <u>Branch1</u></a></li>
-            {{else}}
-              <li><a name="filterBranch1" href="#"><i class="fa fa-angle-down"></i> <u>Branch1</u></a></li>
-              <div class="row">
-                <div class="col offset-l1">
-                  <ul>
-                    <li><input type="checkbox" id="Branch1" />
-                    <label class="black-text" for="Branch1"> Branch1</label></li>
-                    <li><input type="checkbox" id="Branch2" />
-                    <label class="black-text" for="Branch2"> Branch2</label></li>
-                    <li><input type="checkbox" id="Branch3" />
-                    <label class="black-text" for="Branch3"> Branch3</label></li>
-                    <li><input type="checkbox" id="Branch4" />
-                    <label class="black-text" for="Branch4"> Branch4</label></li>
-                  </ul>
-                </div>
-              </div>
-            {{/if}}
-
-            {{#if filterBranch2}}
-              <li><a name="filterBranch2" href="#"><i class="fa fa-angle-right"></i> <u>Branch2</u></a></li>
-            {{else}}
-              <li><a name="filterBranch2" href="#"><i class="fa fa-angle-down"></i> <u>Branch2</u></a></li>
-              <div class="row">
-                <div class="col offset-l1">
-                  <ul>
-                    <li><input type="checkbox" id="SubBranch1" />
-                    <label class="black-text" for="SubBranch1"> SubBranch1</label></li>
-                    <li><input type="checkbox" id="SubBranch2" />
-                    <label class="black-text" for="SubBranch2"> SubBranch2</label></li>
-                    <li><input type="checkbox" id="SubBranch3" />
-                    <label class="black-text" for="SubBranch3"> SubBranch3</label></li>
-                    <li><input type="checkbox" id="SubBranch4" />
-                    <label class="black-text" for="SubBranch4"> SubBranch4</label></li>
-                  </ul>
-                </div>
-              </div>
-            {{/if}}
-
-
-          </ul>
-        </form>
+      <div class="hide-on-med-and-down computer">
+        <div class="sideText">
+          <div class="grey-text">
+            <h5>Filter</h5>
+          </div>
+          {{> filterOptions}}
+        </div>
       </div>
+
     </div>
   {{/if}}
 </Template>
